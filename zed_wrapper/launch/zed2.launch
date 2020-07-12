@@ -18,7 +18,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
     <!-- KenYu added, for localization -->
-    <arg name="publish_map_tf"                    default="true"/>
+    <arg name="publish_map_tf"       default="true"/>
     <arg name="svo_file"             default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
     <arg name="stream"               default="" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
     <arg name="robot_name"           default="car1" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
@@ -37,7 +37,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="cam_roll"              default="0.0" /> <!-- Orientation respect to base frame (i.e. "base_link) -->
     <arg name="cam_pitch"             default="0.0" /> <!-- Orientation respect to base frame (i.e. "base_link) -->
     <arg name="cam_yaw"               default="0.0" /> <!-- Orientation respect to base frame (i.e. "base_link) -->
-
     <group ns="$(arg camera_name)">
         <include file="$(find zed_wrapper)/launch/include/zed_camera.launch.xml">
             <arg name="robot_name"          value="$(arg robot_name)" />
